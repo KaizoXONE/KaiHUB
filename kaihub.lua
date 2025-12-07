@@ -13,7 +13,7 @@ local img = {
 	['Update'] = 80962110871992,
 }
 
-local window = ui:indow({
+local window = ui:Window({
     Title = "Kai HUB",
     Desc = "Fish It | Premium",
 })
