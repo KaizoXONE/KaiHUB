@@ -1,6 +1,6 @@
-local var1 = loadstring(game:HttpGet("https://raw.githubusercontent.com/KaizoXONE/UiLib/refs/heads/main/ui2.lua", true))()
+local ui = loadstring(game:HttpGet("https://raw.githubusercontent.com/KaizoXONE/UiLib/refs/heads/main/ui2.lua", true))()
 
-local Banner = {
+local img = {
 	['Genral'] = 101849161408766,
 	['Auto'] = 110162136250435,
 	['Setting'] = 72210587662292,
@@ -13,28 +13,40 @@ local Banner = {
 	['Update'] = 80962110871992,
 }
 
-local var2 = var1:Window({
+local window = ui:indow({
     Title = "Kai HUB",
     Desc = "Fish It | Premium",
 })
 
-local update = var2:Add({
+-- TAB
+
+
+local update = window:Add({
     Title = "Update",
     Desc = "get update information in here",
-    Banner = Banner.Update
+    Banner = img.Update
 })
 
-local crot1 = update:Section({
-	Title = "Fishing Feature",
-	Side = 'l'
+local main = window:Add({
+	Title = "Main",
+	Desc = "Main Feature In here",
+	Banner = img.Genral,
 })
 
-crot1:Toggle({
-	Title = "Instant Fishing",
-	Desc = "Enable Instant Fishing And Cath",
-	Value = false,
-	Callback = function()
-		
-	end
+local misc = window:Add({
+	Title = "Misc",
+	Desc = "Misc Feature",
+	Banner = img.Misc,
 })
 
+local shop = window:Add({
+	Title = "Shop",
+	Desc = "Buy Rod/Bait And Other In Here",
+	Banner = img.Shop
+})
+
+local tp = window:Add({
+	Title = "Teleport Option",
+	Desc = "Keliatan Banget Mageran Nya -Kaizo",
+	Banner = img.Teleport
+})
